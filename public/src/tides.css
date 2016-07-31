@@ -1,0 +1,1359 @@
+.ui-datepicker { z-index: 9999 !important; }
+.announce-banner {
+    background-color: #d8e7e9;
+    border: none;
+    margin-bottom: 0.5em;
+    border-bottom: 3px solid #a2c4c9;
+    padding: 0.5em 1em;
+}
+.tz-announce {
+    border: none;
+    margin-bottom: 0.5em;
+    padding: 0;
+}
+#tides-main { overflow: auto; margin-top: 0.5em; width: 960px; }
+#location-select-col {
+    float: left;
+    clear: none;
+    width: 440px;
+    height: 36.1em;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf5ce;
+    background-color: #eee;
+    overflow: hidden;
+}
+#location-tabs {
+    margin: 0;
+    padding: 0;
+    height: 2.4em;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+a.location-tab {
+    display: block;
+    float: left;
+    clear: none;
+    line-height: 1.5em;
+    font-size: 1em;
+    text-align: center;
+    width: 140px;
+    padding: 0.3em 0;
+    background-color: #dbdbdb;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 0.3em solid #dbdbdb;
+}
+a.location-tab-active {
+    background-color: #666;
+    color: #fff;
+    border-bottom: 0.3em solid #000;
+}
+a.location-tab:hover {
+    text-decoration: underline;
+}
+.region-links {
+    margin: 0;
+    padding: 0 0 0.4em;
+    border: none;
+    border-bottom: 4px solid #fff;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    position: relative;
+}
+.region-links ul {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0.7em 0 0 10px;
+    position: relative;
+}
+.region-links ul li {
+    list-style-type: none;
+    list-style-image: none;
+    float: left;
+    clear: none;
+    font-size: 0.9em;
+    margin: 0 5px 0 0;
+    padding: 0 5px 0 0;
+    border-right: 1px solid #999;
+}
+.region-links ul li.last {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+}
+.region-links ul.region-links-aus {
+    float: left;
+    clear: left;
+    width: 100%;
+}
+.region-links ul.subregion {
+    float: none;
+    clear: none;
+    position: absolute;
+    left: 0;
+    top: 2.7em;
+    padding: 0.3em 10px;
+    /*background-color: #dddddd;*/
+    width: auto;
+}
+.region-links ul.subregion li {
+    font-size: 1em;
+    line-height: 1.5;
+}
+.region-links ul.region-links-other {
+    float: none;
+    clear: none;
+    top: 0;
+    right: 10px;
+    position: absolute;
+}
+.region-links ul.region-links-other li {
+    float: right;
+}
+.region-links a {
+    color: #666;
+}
+.region-links a.active {
+    color: #C00;
+}
+.region-links ul.subregion a {
+    color: #333;
+}
+.region-links ul.subregion a.active {
+    color: #F33;
+}
+.region-links a:hover, .region-links ul.subregion a:hover {
+    color: #000;
+}
+.mainpanel {
+    width: 440px;
+    height: 28em;
+    border-bottom: 4px solid #fff;
+}
+#location-map-legend {
+    width: 440px;
+    height: 2.8em;
+    background-color: #fdf5ce;
+    overflow: hidden;
+}
+#location-map-legend ul {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0.5em 0 0 11px;
+    padding: 0;
+    overflow: auto;
+    width: 100%;
+}
+#location-map-legend ul li {
+    float: left;
+    clear: none;
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-size: 0.9em;
+    line-height: 1.8em;
+}
+#location-map-legend ul li#legend-offsets {
+    margin-right: 25px;
+    padding-right: 30px;
+    border-right: 2px solid #CCC;
+}
+#location-map-legend ul li.disabled {
+    color: #666;
+}
+#location-map-legend ul li input {
+    float: left;
+    clear: none;
+    margin: 0;
+    padding: 0;
+}
+html>/**/body #location-map-legend ul li input {
+    margin-top: 2px;
+}
+#location-map-legend ul li img {
+    float: left;
+    clear: none;
+    margin: 0 5px 0 6px;
+}
+#location-map-legend ul li label {
+    float: left;
+    clear: none;
+    margin: 0;
+}
+#location-list {
+    height: 31em;
+    background-color: #d8e7e9;
+    margin: 0;
+    padding: 0 10px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+#location-list h3 {
+    margin: 1em 0 0.5em 10px;
+    padding: 0 0 0.5em;
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #333;
+    border-bottom: 1px dotted #999;
+}
+#location-list .locations-list-inner {
+    height: 25em;
+    width: 420px;
+    overflow: auto;
+    margin: 0.2em 0 0 10px;
+    padding: 0.3em 0 0.5em;
+}
+#location-list ul {
+    float: left;
+    clear: none;
+    margin: 0 10px 0 0;
+    padding: 0 0 0.5em;
+    list-style-type: none;
+    list-style-image: none;
+    width: 190px;
+}
+#location-list ul li span.bonus {
+    color: #333;
+    font-size: 0.9em;
+    margin-left: 16px;
+}
+#location-list a {
+    text-decoration: none;
+    color: #444;
+    font-size: 1em;
+}
+#location-list a.selected {
+    color: red;
+}
+#location-list a:hover {
+    color: #000;
+}
+#location-list ul li {
+    padding: 0 0 0 14px;
+    margin: 0 0 0.2em;
+    position: relative;
+}
+#location-list ul li a.stream {
+    background-image: url('/australia/tides/images/mrkr-stream-mini.png');
+}
+#location-list ul li a.feature {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url('/australia/tides/images/mrkr-mini.png');
+    padding: 0 0 0 16px;
+    margin: 0;
+    display: block;
+}
+#location-list ul li a.showHideOffsets {
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+#location-list ul li.stream a.feature {
+    background-image: url('/australia/tides/images/mrkr-stream-mini.png');
+}
+#location-list ul ul {
+    float: none;
+    clear: none;
+    margin: 0.2em 0 0 16px;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+    width: 160px;
+}
+#location-list ul ul li {
+    padding: 0;
+}
+#location-list ul ul li a.feature {
+    background-image: url('/australia/tides/images/mrkr-td-mini.png');
+}
+#location-list-default {
+    margin: 0;
+}
+#location-list-default p {
+    color: #333;
+    margin: 0.5em 0 0.5em 10px;
+}
+#location-list-default ul {
+    margin: 0 0 0 20px;
+}
+#location-list-default ul li {
+    padding: 0;
+}
+#location-list-controls {
+    position: absolute;
+    top: 1.7em;
+    right: 15px;
+    display: none;
+    font-size: 1em;
+    line-height: 1.1em;
+    text-align: right;
+    color: #666;
+}
+#location-list-controls a {
+    font-size: 0.9em;
+}
+#location-list-controls a.active {
+    color: #000;
+}
+#location-info-col {
+    float: left;
+    clear: none;
+    width: 300px;
+    height: 33.7em;
+    margin: 2.4em 0 0 5px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e8e3f2;
+}
+#location-info-intro {
+    margin: 0;
+    padding: 0 0 0 50px;
+    background-color: #e1e1e1;
+    border-bottom: 4px solid #fff;
+    background-image: url('/australia/tides/images/icon-marker-large.png');
+    background-repeat: no-repeat;
+    background-position: 14px 8px;
+}
+#location-info-intro p {
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.2em;
+    padding: 0.7em 12px;
+    margin: 0;
+    border-left: 4px solid #fff;
+}
+#location-info-intro a {
+    color: #111;
+}
+#location-info-intro a:hover {
+    color: #CC0000;
+}
+#location-info-heading {
+    background-color: #c0aeea;
+    border-bottom: 4px solid #fff;
+    text-align: center;
+    padding: 0.5em;
+    margin: 0;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+#location-info-heading span.default {
+    color: #555;
+}
+#location-info-next-tides, #location-info-next-stream-slack {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    display: none;
+}
+#location-info-next-tides dt, #location-info-next-stream-slack dt {
+    float: left;
+    clear: left;
+    border-bottom: 4px solid #fff;
+    border-right: 4px solid #fff;
+    width: 156px;
+    height: 3em;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: normal;
+    line-height: 3em;
+}
+#location-info-next-tides dd, #location-info-next-stream-slack dd {
+    float: left;
+    clear: none;
+    border-bottom: 4px solid #fff;
+    width: 110px;
+    height: 2.6em;
+    margin: 0;
+    padding: 0.4em 20px 0 10px;
+    font-size: 1.3em;
+    line-height: 1.1em;
+}
+#location-info-next-stream-slack dd {
+    padding: 0 20px 0 10px;
+    line-height: 3em;
+    height: 3em;
+}
+#location-info-next-tides dd span, #location-info-next-stream-slack dd span {
+    font-size: 0.9em;
+}
+#location-info-next-tides dd span.noHeight, #location-info-next-stream-slack dd span.noHeight {
+    font-size: 1em;
+    display: block;
+    padding: 0.5em 0;
+}
+#location-info-next-tides dt.high, #location-info-next-stream-slack dt.high {
+    background-color: #9fc6e7;
+}
+#location-info-next-tides dd.high, #location-info-next-stream-slack dd.high {
+    background-color: #dae7ef;
+}
+#location-info-next-tides dt.low {
+    background-color: #a2c4c9;
+}
+#location-info-next-tides dd.low {
+    background-color: #d8e7e9;
+}
+
+#location-info-details {
+    margin: 0;
+    padding: 16px 0 0;
+}
+#location-info-details .rounded {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#location-info-details h2#location-heading {
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    margin: 0 0 2px;
+    padding: 0 0 0 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+#location-info-details .next-tide {
+    height: 18px;
+    margin: 0 0 5px;
+    padding: 11px 9px;
+    font-size: 12px;
+}
+#location-info-details #next-high {
+    background-color: #a2c4c9;
+}
+#location-info-details #next-low {
+    background-color: #d8e7e9;
+}
+#location-info-details #site-info {
+    margin: 0;
+    padding: 11px 8px;
+    background-color: #dae7ef;
+}
+#location-info-details #site-info.no-info {
+    height: 185px;
+}
+#location-info-details #site-info h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+}
+#location-info-col #site-info {
+    padding: 1.5em 20px 1em 10px;
+    overflow: auto;
+    height: 14.5em;
+}
+#location-info-col #site-info h3 {
+    margin: 0.7em 0 0.5em;
+    padding: 0;
+    font-size: 1.4em;
+    font-weight: normal;
+    color: #444;
+}
+#location-info-col #site-info p {
+    float: none;
+    clear: none;
+    overflow: auto;
+    margin: 0 0 0.5em;
+    padding: 0;
+    font-size: 1em;
+    font-weight: normal;
+    color: #000;
+}
+#location-info-col #site-info p span.label {
+    font-weight: bold;
+    float: left;
+    clear: left;
+    width: 45%;
+    color: #222;
+    line-height: 1.4em;
+}
+#location-info-col #site-info p span.data {
+    float: left;
+    clear: none;
+    line-height: 1.4em;
+}
+#location-info-col #site-info p.site-notice {
+    margin: 0em 0 0.5em;
+}
+#location-info-col #site-info p span.utc {
+    color: #333;
+    margin-left: 3px;
+}
+#location-info-col #site-info ul li {
+    list-style: none;
+}
+#location-info-col #site-info li a[href$='.pdf'] {
+    background:transparent url(../images/pdf_icon.png) center left no-repeat;
+    display:inline-block;
+    padding-left:2em;
+    line-height:1.5em;
+}
+#tides-right-col {
+    float: left;
+    clear: none;
+    width: 200px;
+    margin: 0 0 0 5px;
+    padding: 0;
+
+}
+#tides-right-col div.right-inner {
+    float: left;
+    clear: none;
+    width: 210px;
+    margin: 0;
+    padding: 0;
+}
+#tides-right-col div.right-inner-top {
+    height: 2.4em;
+}
+#tides-right-col ul#infobar {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    float: right;
+}
+#tides-right-col ul#infobar li {
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    margin: 0 0 0 8px;
+    padding: 0;
+    float: left;
+    clear: none;
+}
+#tides-right-col ul#infobar li a {
+    display: block;
+    height: 22px;
+    padding-left: 22px;
+    background-image: url('/australia/tides/images/infobar-sprite.png');
+    background-repeat: no-repeat;
+}
+#infobar-about {
+    background-position: 0 0;
+}
+#infobar-about:hover {
+    background-position: 0 -22px;
+}
+#infobar-help {
+    background-position: 0 -44px;
+}
+#infobar-help:hover {
+    background-position: 0 -66px;
+}
+#infobar-feedback {
+    background-position: 0 -88px;
+}
+#infobar-feedback:hover {
+    background-position: 0 -110px;
+}
+#tides-right-col div.right-inner-bottom {
+    height: 33.2em;
+    padding-top: 0.5em;
+    background-color: #f0f0f0;
+}
+#tides-right-col div.callout-feature {
+    overflow: auto;
+    float: none;
+    margin: 1em 0 0;
+    padding: 0;
+}
+#tides-right-col div.callout-feature img {
+    float: left;
+    clear: left;
+    width: 60px;
+    margin: 0 7px;
+}
+#tides-right-col div.callout-feature h3 {
+    float: left;
+    clear: none;
+    width: 130px;
+    margin: 0 0 0.4em;
+    padding: 0;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+#tides-right-col div.callout-feature p {
+    float: left;
+    clear: none;
+    width: 123px;
+    margin: 0 0 0.4em;
+    padding: 0;
+    font-size: 1em;
+}
+#tides-right-col div.no-image a {
+    margin-left: 10px;
+}
+#tides-right-col div.callout-feature p br {
+    line-height: 0.4em;
+}
+
+#tides-results {
+    width: 950px;
+    padding: 1em 0 1em 10px;
+    background-color: #eee;
+    margin: 5px 0 0;
+    overflow: auto;
+    position: relative;
+}
+.result-error {
+    height: 1.1em;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    font-weight: normal;
+    color: #666;
+    text-decoration: none;
+    margin: 0.5em 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+#results-errors {
+    display: none;
+    width: 940px;
+    padding: 0;
+    margin: 1em 0;
+    float: none;
+    clear: none;
+    text-align: center;
+    font-size: 17px;
+    font-weight: normal;
+    color: #333;
+}
+#results-errors p {
+    margin: 1em 0;
+}
+#results-print {
+    display: none;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+#results-print a {
+    color: #000;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: url('/australia/tides/images/icon-print-table.png');
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+    padding-left: 20px;
+}
+#results-print a:hover {
+    color: #CC0000;
+}
+#results-nav {
+    display: none;
+    width: 940px;
+    padding: 0;
+    margin: 0;
+    float: none;
+    clear: none;
+    overflow: auto;
+}
+#results-nav a.step {
+    height: 1.1em;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    font-weight: normal;
+    color: #666;
+    text-decoration: none;
+    margin: 0.5em 0 0;
+    padding: 0;
+    background-image: url('/australia/tides/images/step-iconsprite.png');
+    background-repeat: no-repeat;
+}
+#results-nav a.step:hover {
+    color: #000;
+}
+#results-nav #nav-left, #results-nav #nav-right {
+    float: left;
+    clear: none;
+    overflow: auto;
+    width: 240px;
+    margin: 0 5px;
+    padding: 0.5em 0 0;
+}
+#results-nav #nav-left a.step {
+    float: left;
+    padding-left: 32px;
+    background-position: left 3px;
+}
+#results-nav #nav-left a.step:hover {
+    background-position: left -17px;
+}
+#results-nav #nav-right a.step {
+    float: right;
+    padding-right: 32px;
+    background-position: right -37px;
+}
+#results-nav #nav-right a.step:hover {
+    background-position: right -57px;
+}
+#results-nav #nav-middle {
+    float: left;
+    clear: none;
+    text-align: center;
+    width: 440px;
+    margin: 0.5em 0;
+    padding: 0;
+}
+#results-nav #nav-date {
+    text-align: center;
+    padding: 6px 10px;
+    width: 420px;
+    margin: 0;
+    background-color: #fff;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+#results-nav #nav-date input.text {
+    width: 80px;
+    margin: 0 10px;
+    background-color: #eaeaea;
+    border: none;
+    padding: 3px 7px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+#results-nav #nav-date a {
+    color: #000;
+}
+#results-nav #nav-date a:hover {
+    color: #CC0000;
+}
+#tides-results p.default { clear: none; width: 40%; margin: 0; line-height: 21px; font-size: 17px; font-weight: normal; color: #999; }
+#tides-results p.default-left { float: left; padding: 0 0 0 5px; }
+#tides-results p.default-right { float: right; padding: 0 5px 0 0; margin: 0 10px; text-align: right; }
+
+#tides-results-table-outer {
+    overflow: hidden;
+    width: 950px;
+    margin: 0 0 1em;
+}
+#tides-results-table-outer .processing {
+    background-image: url('/australia/tides/images/waiting.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#tides-results p.print {
+    display: none;
+}
+#tides-results h2 {
+    background-image: url('/australia/tides/images/mrkr-mini.png');
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+    display: block;
+    width: 900px;
+    padding: 10px 10px 10px 30px;
+    margin: 0 0 5px;
+    background-color: #9fc6e7;
+    color: #333;
+    font-size: 15px;
+    line-height: 14px;
+    overflow: auto;
+}
+#tides-results h2.offset {
+    background-image: url('/australia/tides/images/mrkr-td-mini.png');
+}
+#tides-results h2.stream {
+    background-image: url('/australia/tides/images/mrkr-stream-mini.png');
+}
+#tides-results h2 .sub {
+    font-size: 13px;
+    font-weight: normal;
+}
+#tides-results h2 .date-range {
+    width: 300px;
+    margin: 0;
+    padding: 0 5px;
+    float: right;
+    text-align: right;
+    line-height: 14px;
+}
+#tides-results .tide-days-outer {
+    width: 1000px;
+    overflow: auto;
+    float: none;
+    clear: none;
+}
+#tides-results .tide-day {
+    float: left;
+    clear: none;
+    width: 128px;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0 0 0 5px;
+    background-color: #fff;
+}
+#tides-results .tide-day div.moon-phase {
+    padding: 6px 0 0 6px;
+    float: left;
+}
+#tides-results .tide-days-outer .first-day {
+    margin-left: 0;
+}
+#tides-results .tide-day h3 {
+    padding: 0.5em 0 0.4em;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: #4885e6;
+    float: none;
+    clear: none;
+}
+#tides-results .tide-day h3 span.day {
+    display: block;
+    float: left;
+    clear: both;
+    width: 30px;
+    padding: 6px 6px 0 0;
+    border-right: 1px solid #e4e4e4;
+    color: #4885e6;
+    text-align: right;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+#tides-results .tide-day h3 span.date {
+    display: block;
+    float: left;
+    clear: left;
+    width: 30px;
+    padding: 2px 6px 8px 0;
+    margin: 0 4px 0 0;
+    border-right: 1px solid #e4e4e4;
+    color: #4885e6;
+    text-align: right;
+    font-weight: normal;
+    font-size: 18px;
+}
+#tides-results .tide-day h3 span.month {
+    display: block;
+    float: none;
+    clear: none;
+    padding: 30px 6px 0;
+    margin-left: 37px;
+    color: #4885e6;
+    font-size: 11px;
+    font-weight: normal;
+}
+#tides-results .tide-day table {
+    width: 128px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-weight: normal;
+    color: #4885e6;
+}
+#tides-results .tide-day table tr {
+    margin: 0;
+    padding: 0;
+}
+#tides-results .tide-day table td,
+#tides-results .tide-day table th {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: normal;
+    border: none;
+}
+#tides-results .tide-day .high-tide {
+    color: #000;
+}
+#tides-results .tide-day .low-tide {
+    color: #f83a22;
+}
+#tides-results .tide-day tr .instance {
+    width: 38px;
+    padding: 0 0 0 12px;
+    border-right: 1px solid #e4e4e4;
+    border-top: 1px solid #e4e4e4;
+    text-align: left;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #333;
+}
+#tides-results .tide-day .localtime {
+    padding: 0.4em 0 0.1em 8px;
+    border-top: 1px solid #e4e4e4;
+}
+#tides-results .tide-day .height {
+    padding: 0.1em 0 0.4em 8px;
+    font-size: 1em;
+}
+body > #tides-results .tide-day .height {
+    color: #333;
+}
+body > #tides-results .tide-day .height.low-tide {
+    color: #DF6353;
+}
+#tides-results .tide-day .padded {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+}
+
+/* tidal stream styles */
+#tides-results .tide-day table.stream th {
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    padding: 0.4em 0;
+    font-size: 1em;
+}
+#tides-results .tide-day table.stream tr th:first-child {
+    border-left: none;
+
+}
+#tides-results .tide-day table.stream th.sub {
+    font-size: 0.9em;
+    padding: 0.3em 0;
+}
+#tides-results .tide-day table.stream td {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0.5em 0;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+#tides-results .tide-day table.stream th.slack-time {
+    text-transform: none;
+    font-size: 0.9em;
+    width: 50px;
+    border-left: none;
+    padding: 0.7em 0;
+}
+#tides-results .tide-day table.stream td.ebb {
+    color: #DF6353;
+}
+#local-time-notice {
+    display: auto;
+    clear: none;
+    width: 35%;
+    color: #CC0000;
+    font-size: 0.9em;
+    margin: 0 0 0.6em 0;
+    padding: 0 0 0 20px;
+    background-image: url('/australia/tides/images/icon-comment-red.png');
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+}
+#moon-phase-legend {
+    display: none;
+    float: right;
+    clear: none;
+    width: 60%;
+    margin: 0.8em 0 0;
+    padding: 0 0 0 20px;
+}
+#moon-phase-legend .moon-phases-images {
+    float: right;
+}
+#moon-phase-legend .moon-phases-label {
+    display: block !important;
+    clear: both;
+    font-weight: bold;
+}
+#moon-phase-legend .moon-phases-images div {
+    display: inline;
+    padding: 0 2em 0.5em 2em;
+}
+#moon-phase-legend .moon-phases-images span,
+#moon-phase-legend .moon-phases-images .moon-phase {
+    vertical-align: middle;
+    padding-right: 0.4em;
+}
+#streams-legend {
+    display: none;
+    float: right;
+    clear: none;
+    width: 50%;
+    text-align: right;
+    color: #333;
+    font-size: 0.9em;
+    margin: 0.8em 0 0;
+    padding: 0;
+}
+#streams-legend .blue {
+    color: #4885E6;
+}
+#streams-legend .red {
+    color: #DF6353;
+}
+
+.x-window-tl .x-window-header {
+    padding-bottom: 0;
+}
+.x-window-header-text {
+    line-height: 28px;
+    font-size: 1.1em;
+    padding-right: 2px;
+}
+
+div.location-popup span {
+    display: block;
+    background-image: url('/australia/tides/images/mrkr-mini.png');
+    background-position: 4px 3px;
+    background-repeat: no-repeat;
+    padding: 4px 4px 4px 20px;
+    color: #0167CC;
+}
+.clusteredPopup {
+    background: none repeat scroll 0 0 #FFFFFF;
+    font: 11px Tahoma,sans-serif;
+    max-height: 200px;
+    overflow: auto;
+    padding: 5px;
+    margin: 0;
+}
+.clusteredPopup dd {
+    margin: 0;
+}
+.clusteredPopup dd a {
+    background-image: url('/australia/tides/images/mrkr-mini.png');
+    background-position: 2px 4px;
+    background-repeat: no-repeat;
+    border-bottom: 1px dotted #BBBBBB;
+    color: #0167CC;
+    display: block;
+    padding-bottom: 0;
+    text-decoration: none;
+    padding: 4px 0 6px 20px;
+    width: 135px;
+}
+.clusteredPopup dd a.stream {
+    background-image: url('/australia/tides/images/mrkr-stream-mini.png');
+}
+.clusteredPopup dd a.OFFSET {
+    background-image: url('/australia/tides/images/mrkr-td-mini.png');
+}
+.clusteredPopup dd:last-child a {
+    border-bottom: medium none;
+}
+
+.close-modal {
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 8px;
+}
+.close-modal:hover {
+    opacity: 0.3;
+}
+.popup-container {
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 11px;
+    margin: 10px 0;
+    padding: 10px 10px 10px 20px;
+    position: relative;
+    width: 675px;
+}
+.popup-container hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #CCCCCC -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-right: medium none;
+    border-style: dotted none none;
+    border-width: 1px medium medium;
+    display: block;
+    height: 1px;
+    margin: 10px 0;
+}
+.popup-container h2 {
+    color: #CC0000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+.popup-container h3 {
+    color: #CC0000;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 1em;
+}
+.popup-container dl p {
+    margin: 0.5em 0;
+}
+.popup-container dt {
+    color: #444444;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.popup-container dd {
+    margin: 0 0 1.5em 1.5em;
+}
+.popup-container ol {
+    list-style: decimal outside none;
+    margin: 0.2em 0 0 0.2em;
+    padding-left: 2em;
+}
+.popup-container ul {
+    list-style: none outside url("/images/ui/symbols/bullet.gif");
+    margin: 0.2em 0 0;
+    padding-left: 2em;
+}
+.popup-container li {
+    margin-bottom: 0.2em;
+}
+.feedback-content p, .disc-content p, #disclaimer-accept p {
+    margin: 1em 1em 1em 0;
+}
+.feedback-content {
+    height: 520px;
+    margin: 20px 12px 10px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.feedback-content h2 {
+    color: #CC0000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding-top: 0;
+}
+.feedback-content h3 {
+    font-size: 13px;
+    line-height: 16px;
+    margin: 13px 0;
+}
+.feedback-content input {
+    margin: 3px 3px 3px 4px;
+}
+.feedback-content textarea {
+    font-size: 12px;
+}
+.feedback-form-group h3 {
+    margin: 1em 0;
+}
+.feedback-form-group label {
+    margin-bottom: 2px;
+    margin-right: 7px;
+}
+.feedback-form-buttons {
+    margin: 1em 0;
+}
+.feedback-form-buttons input {
+    margin-left: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.help-scrollable {
+    height: 412px;
+    overflow: auto;
+    padding-right: 20px;
+    width: 456px;
+}
+.help-subcategory {
+    height: 382px;
+}
+.help-menu {
+    background-color: #FFFFFF;
+    border-right: 2px dotted #CCCCCC;
+    height: 350px;
+    left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    top: 10px;
+    width: 190px;
+}
+.help-menu a:link, .help-menu a:visited {
+    color: #CC0000;
+    text-decoration: none;
+}
+.help-menu a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+.help-menu ol {
+    margin-left: 30px;
+    padding: 0;
+}
+.help-menu ol ol {
+    margin: 0.2em 0 0.5em 20px;
+}
+.help-menu h2 {
+    border-bottom: 2px solid #CCCCCC;
+    color: #222222;
+    font-size: 1.1em;
+    font-weight: normal;
+    padding-bottom: 0.3em;
+}
+.help-content {
+    margin-left: 205px;
+    padding-right: 30px;
+    width: 446px;
+}
+.help-content a:link, .help-content a:visited {
+    color: #0066CC;
+}
+.help-content a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+.help-content ul {
+    margin: 0 0 1em;
+}
+.help-content ul ul, .help-content ol ul {
+    margin: 0.5em 0 1em;
+}
+.help-content li {
+    line-height: 1.2em;
+}
+.help-content li br, .help-content p br {
+    line-height: 0.5em;
+}
+.help-content h2 {
+    font-size: 1.7em;
+    margin: 0 0 0.7em;
+}
+.help-content h2.parent {
+    color: #444444;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+.help-content h3 {
+    font-size: 1.2em;
+    margin: 0 0 0.7em;
+}
+.help-content p {
+    margin: 0 0 1em;
+}
+.help-content .warning {
+    background-color: #FBE983;
+    padding: 0.1em;
+}
+.help-content .note {
+    background-color: #F5F5F5;
+    border: 1px dotted #CCCCCC;
+    padding: 0.8em 1em;
+}
+.help-content .tip {
+    background-color: #FFFFCC;
+    border: 1px dotted #FFCC33;
+    padding: 0.8em 1em;
+}
+.help-content .blue {
+    color: #0066CC;
+}
+.help-content strong {
+    color: #333333;
+}
+.help-content dl.help-time-zone {
+    margin-bottom: 1em;
+    overflow: auto;
+}
+.help-content dl.help-time-zone dt {
+    clear: left;
+    float: left;
+    font-weight: bold;
+    margin: 0 0 0.5em;
+    width: 50px;
+}
+.help-content dl.help-time-zone dd {
+    clear: none;
+    float: left;
+    margin: 0 0 0.5em;
+    width: 380px;
+}
+.about-menu {
+    height: 300px;
+    padding-right: 18px;
+    width: 180px;
+}
+.about-menu .highlight {
+    background-color: #FFFFCC;
+    border: 1px solid #FFCC33;
+    color: #000000;
+    margin-top: 2em;
+    padding: 0.9em 0.7em 0.2em;
+}
+.about-menu .highlight p {
+    margin: 0 0 0.5em;
+    white-space: normal;
+}
+.about-menu .highlight strong {
+    font-weight: bold;
+}
+.about-menu ul {
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0 0 0 2px;
+    padding: 0;
+}
+.about-menu ul li {
+    margin-bottom: 0.5em;
+}
+
+.bomOLControlZoomPanel .bomOLControlZoomToHomeItemInactive {
+    background: url("/libs/bommap/2.6.2/resources/images/bommap/zoom-home.png") repeat scroll -3px -3px rgba(70, 70, 70, 0.7);
+}
+.bomOLControlZoomPanel .bomOLControlZoomToHomeItemInactive:hover {
+    background: url("/libs/bommap/2.6.2/resources/images/bommap/zoom-home.png") repeat scroll -3px -3px rgba(50, 50, 50, 0.8);
+}
+div.bomOLControlZoom a {
+    background: none repeat scroll 0 0 rgba(70, 70, 70, 0.7);
+}
+
+div.bomOLControlZoom a:hover {
+    background: none repeat scroll 0 0 rgba(50, 50, 50, 0.8);
+}
+
+/* FIX FOR IE7 - some panels showing invisible divs for headers that do not exist */
+.ghost-panel-fix { line-height: 0px; height: 0px; border: none; }
+
+/* jScrollPane default styles */
+.jspContainer { overflow: hidden; position: relative; }
+.jspPane { position: absolute; }
+.jspVerticalBar { position: absolute; top: 0; right: 0; width: 16px; height: 100%; background: red; }
+.jspHorizontalBar { position: absolute; bottom: 0; left: 0; width: 100%; height: 16px; background: red; }
+.jspVerticalBar *,
+.jspHorizontalBar * { margin: 0; padding: 0; }
+.jspCap { display: none; }
+.jspHorizontalBar .jspCap { float: left; }
+.jspTrack { background: #dde; position: relative; }
+.jspDrag { background: #bbd; position: relative; top: 0; left: 0; cursor: pointer; }
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag { float: left; height: 100%; }
+.jspArrow { background: #50506d; text-indent: -20000px; display: block; cursor: pointer; }
+.jspArrow.jspDisabled { cursor: default; background: #80808d; }
+.jspVerticalBar .jspArrow { height: 16px; }
+.jspHorizontalBar .jspArrow { width: 16px; float: left; height: 100%; }
+.jspVerticalBar .jspArrow:focus { outline: none; }
+.jspCorner { background: #eeeef4; float: left; height: 100%; }
+
+/* jScrollPane overrides */
+.jspScrollable { outline: none; }
+.jspVerticalBar { width: 10px; }
+.jspTrack {	background-color: #EBEBEB; }
+.jspDrag { background-color: #D8D8D8; }
+.jspArrow { background-color: #888; }
+.jspArrow.jspDisabled { background-color: #777; }
+.jspVerticalBar .jspArrow { height: 10px; }
+.jspHorizontalBar .jspArrow { width: 10px; }

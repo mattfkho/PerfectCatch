@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Map </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./src/tides.css' />
+    <link rel='stylesheet' href='./lib/bootstrap/dist/css/bootstrap.min.css' />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet"
+        type="text/css" />
+</head>
+
+<body>
+    <div class='container'>
+        <div class='page-header'>
+            <h1> Perfect Catch @ Port Macquarie, NSW </h1>
+        </div>
+
+        <div class='row'>
+            <div class='col-sm-5'>
+                <div style='padding:2px'>
+                    <button class='btn btn-primary' style='width:150px'> Warnings </button>
+                    <button class='btn btn-primary' style='width:150px'> Temperature </button>
+                </div>
+            </div>
+            <div class='col-sm-5 text-right'>
+                <div style='padding:2px'>
+                    <button class='btn btn-primary' style='width:150px' onclick="popDialog()"> Send Alert </button>
+                </div>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-sm-10'>
+                <div style='padding:2px'>
+                    <button class='btn btn-primary' style='width:150px'> Fishing Calendar </button>
+                    <button class='btn btn-primary' style='width:150px'> Location </button>
+                    <button class='btn btn-primary' style='width:150px'> Tackle Box </button>
+                    <button class='btn btn-primary' style='width:150px'> Catch </button>
+                </div>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-sm-10'>
+
+                <div id="map" style="height: 400px; width: auto"></div>
+
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class="col-sm-10">
+                <div id="tides-results">
+                    <h2 class="tide">Port Macquarie, NSW &nbsp;&ndash;&nbsp; 31/07/2016 - 06/08/2016 
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    Start <input type='text' style='width:100px' value='31/07/2016'> &nbsp;
+                    End <input type='text' style='width:100px' value='06/08/2016'/>
+                    </h2>
+                    <div class="tide-days-outer ">
+                        <div class="tide-day first-day ">
+                            <h3>Sun 31 Jul</h3>
+                            <div style='text-align:center;font-size:9px'>
+                                <img style='float:left' src="./src/images/fog.png" alt="" width="45" height="42">
+                                <div>Morning fog.<br/>
+                                Max 21&deg;C<br/>
+                                Min 6&deg;C
+                                </div>
+                            </div>
+                            <div class="moon-phase "><img class="moon-phase" title="New Moon" style='width:20px' src="./src/images/moon-new.png "> 14%</div>
+<div style='clear:both'></div>
+<div style='height:30px;'></div>
+                            <table cellpadding="0 " cellspacing="0 " summary="Times and Heights of High (H) and Low (L) waters
+                        for Port Macquarie, 31 July 2016 ">
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-07-30T14:33:00Z " data-time-local="2016-07-31T00:33:00+10:00" class="localtime low-tide ">12:33 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.31 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-07-30T20:20:00Z " data-time-local="2016-07-31T06:20:00+10:00
+                        " class="localtime high-tide ">6:20 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.07 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-07-31T02:04:00Z " data-time-local="2016-07-31T12:04:00+10:00
+                        " class="localtime low-tide ">12:04 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.25 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-07-31T08:51:00Z " data-time-local="2016-07-31T18:51:00+10:00
+                        " class="localtime high-tide ">6:51 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.54 m</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tide-day ">
+                            <h3>Mon 1 Aug</h3>
+                            <div style='text-align:center;font-size:9px'>
+                                <img style='float:left' src="./src/images/sunny.png" alt="" width="45" height="42">
+                                <div> Sunny.<br/>
+                                Max 23&deg;C<br/>
+                                Min 6&deg;C
+                                </div>
+                            </div>
+                            <div class="moon-phase "><img class="moon-phase " title="New Moon" style='width:20px' src="./src/images/moon-new.png "> 7%</div>
+<div style='clear:both'></div>
+<div style='height:30px;'></div>
+                           <table cellpadding="0 " cellspacing="0 " summary="Times and Heights of High (H) and Low (L) waters
+                        for Port Macquarie, 1 August 2016 ">
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-07-31T15:28:00Z " data-time-local="2016-08-01T01:28:00+10:00
+                        " class="localtime low-tide ">1:28 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.24 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-07-31T21:17:00Z " data-time-local="2016-08-01T07:17:00+10:00
+                        " class="localtime high-tide ">7:17 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.10 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-01T02:58:00Z " data-time-local="2016-08-01T12:58:00+10:00
+                        " class="localtime low-tide ">12:58 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.23 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-01T09:41:00Z " data-time-local="2016-08-01T19:41:00+10:00
+                        " class="localtime high-tide ">7:41 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.58 m</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tide-day ">
+                            <h3>Tue 2 Aug</h3>
+                            <div style='text-align:center;font-size:9px'>
+                                <img style='float:left' src="./src/images/showers.png" alt="" width="45" height="42">
+                                <div> Shower or two.<br/>
+                                Max 20&deg;C<br/>
+                                Min 8&deg;C
+                                </div>
+                            </div>
+                            <div class="moon-phase "><img class="moon-phase " title="New Moon " src="./src/images/new.png "> 3%</div>
+<div style='clear:both'></div>
+<div style='text-align:center;height:30px;background-color:#7CFC00'>Perfect Catch Day</div>
+                            <table cellpadding="0 " cellspacing="0 " summary="Times and Heights of High (H) and Low (L) waters
+                        for Port Macquarie, 2 August 2016 ">
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-01T16:15:00Z " data-time-local="2016-08-02T02:15:00+10:00
+                        " class="localtime low-tide ">2:15 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.20 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-01T22:07:00Z " data-time-local="2016-08-02T08:07:00+10:00
+                        " class="localtime high-tide ">8:07 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.12 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-02T03:46:00Z " data-time-local="2016-08-02T13:46:00+10:00
+                        " class="localtime low-tide ">1:46 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.21 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-02T10:26:00Z " data-time-local="2016-08-02T20:26:00+10:00
+                        " class="localtime high-tide ">8:26 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.59 m</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tide-day ">
+                            <h3>Wed 3 Aug</h3>
+                            <div style='text-align:center;font-size:9px'>
+                                <img style='float:left' src="./src/images/light-showers.png" alt="" width="45" height="42"> 
+                                <div>Possible shower.<br/>
+                                Max 17&deg;C<br/>
+                                Min 5&deg;C
+                                </div>
+                            </div>                            
+                            <div class="moon-phase "><img class="moon-phase " title="New Moon " src="./src/images/new.png "> 1%</div>
+<div style='clear:both'></div>
+<div style='text-align:center;height:30px;background-color:#7CFC00'>Perfect Catch Day</div>
+                            <table cellpadding="0 " cellspacing="0 " summary="Times and Heights of High (H) and Low (L) waters
+                        for Port Macquarie, 3 August 2016 ">
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-02T16:57:00Z " data-time-local="2016-08-03T02:57:00+10:00
+                        " class="localtime low-tide ">2:57 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.19 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-02T22:51:00Z " data-time-local="2016-08-03T08:51:00+10:00
+                        " class="localtime high-tide ">8:51 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.14 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-03T04:32:00Z " data-time-local="2016-08-03T14:32:00+10:00
+                        " class="localtime low-tide ">2:32 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.22 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-03T11:08:00Z " data-time-local="2016-08-03T21:08:00+10:00
+                        " class="localtime high-tide ">9:08 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.57 m</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tide-day ">
+                            <h3>Thu 4 Aug</h3>
+                            <div style='text-align:center;font-size:9px'>
+                                <img style='float:left' src="./src/images/light-showers.png" alt="" width="45" height="42">
+                                <div> Possible shower.<br/>
+                                Max 18&deg;C<br/>
+                                Min 6&deg;C
+                                </div>
+                            </div>
+                            <div class="moon-phase "><img class="moon-phase " title="New Moon " src="./src/images/new.png "> 1%</div>
+<div style='clear:both'></div>
+<div style='text-align:center;height:30px;background-color:#7CFC00'>Perfect Catch Day</div>
+                            <table cellpadding="0 " cellspacing="0 " summary="Times and Heights of High (H) and Low (L) waters
+                        for Port Macquarie, 4 August 2016 ">
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-03T17:36:00Z " data-time-local="2016-08-04T03:36:00+10:00
+                        " class="localtime low-tide ">3:36 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.19 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-03T23:32:00Z " data-time-local="2016-08-04T09:32:00+10:00
+                        " class="localtime high-tide ">9:32 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.15 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-04T05:15:00Z " data-time-local="2016-08-04T15:15:00+10:00
+                        " class="localtime low-tide ">3:15 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.24 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-04T11:46:00Z " data-time-local="2016-08-04T21:46:00+10:00
+                        " class="localtime high-tide ">9:46 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.52 m</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tide-day ">
+                            <h3>Fri 5 Aug</h3>
+                            <div style='text-align:center;font-size:9px'>
+                                <img style='float:left' src="./src/images/showers.png" alt="" width="45" height="42">
+                                <div> Shower or two.<br/>
+                                Max 18&deg;C<br/>
+                                Min 7&deg;C
+                                </div>
+                            </div>
+                            <div class="moon-phase "><img class="moon-phase " title="New Moon " src="./src/images/new.png "> 4%</div>
+<div style='clear:both'></div>
+<div style='height:30px;'></div>
+                            <table cellpadding="0 " cellspacing="0 " summary="Times and Heights of High (H) and Low (L) waters
+                        for Port Macquarie, 5 August 2016 ">
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-04T18:13:00Z " data-time-local="2016-08-05T04:13:00+10:00
+                        " class="localtime low-tide ">4:13 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.21 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-05T00:13:00Z " data-time-local="2016-08-05T10:13:00+10:00
+                        " class="localtime high-tide ">10:13 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.16 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-05T05:57:00Z " data-time-local="2016-08-05T15:57:00+10:00
+                        " class="localtime low-tide ">3:57 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.28 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-05T12:23:00Z " data-time-local="2016-08-05T22:23:00+10:00
+                        " class="localtime high-tide ">10:23 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.45 m</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tide-day ">
+                            <h3>Sat 6 Aug</h3>
+                            <div style='text-align:center;font-size:9px'>
+                                <img style='float:left' src="./src/images/light-showers.png" alt="" width="45" height="42">
+                                <div> Possible shower.<br/>
+                                Max 19&deg;C<br/>
+                                Min 7&deg;C
+                                </div>
+                            </div>
+                            <div class="moon-phase "><img class="moon-phase " title="New Moon" style='width:20px' src="./src/images/moon-new.png "> 8%</div>
+<div style='clear:both'></div>
+<div style='height:30px;'></div>
+                            <table cellpadding="0 " cellspacing="0 " summary="Times and Heights of High (H) and Low (L) waters
+                        for Port Macquarie, 6 August 2016 ">
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-05T18:48:00Z " data-time-local="2016-08-06T04:48:00+10:00
+                        " class="localtime low-tide ">4:48 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.24 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-06T00:51:00Z " data-time-local="2016-08-06T10:51:00+10:00
+                        " class="localtime high-tide ">10:51 am</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.15 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance low-tide ">Low</th>
+                                        <td data-time-utc="2016-08-06T06:38:00Z " data-time-local="2016-08-06T16:38:00+10:00
+                        " class="localtime low-tide ">4:38 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height low-tide ">0.33 m</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2 " class="instance high-tide ">High</th>
+                                        <td data-time-utc="2016-08-06T12:59:00Z " data-time-local="2016-08-06T22:59:00+10:00
+                        " class="localtime high-tide ">10:59 pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height high-tide ">1.36 m</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8lJPCsJirewFWI1KfjoTDaDKoTPdrO9E "></script>
+    <script src="./src/RichMarker.js"></script>
+    <script src="../machine-locations.js"></script>
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js "></script>
+    <script type="text/javascript">
+
+        var map;
+        var infoWindow;
+
+        var mapOptions = {
+            zoom: 7,
+            center: new google.maps.LatLng(-31.4343, 151.9259),
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+        }
+
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        var markers = [];
+
+        var infoWindow = new google.maps.InfoWindow();
+
+        var createMarker = function (info) {
+
+            var marker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(info.Latitude, info.Longitude),
+                title: info.Title
+            });
+            marker.content = '<div class="infoWindowContent ">' + info.Address + '</div>';
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+                infoWindow.open(map, marker);
+            });
+
+            markers.push(marker);
+
+        }
+
+        for (i = 0; i < machines.length; i++) {
+            createMarker(machines[i]);
+        }
+
+        openInfoWindow = function (e, selectedMarker) {
+             e.preventDefault();
+             google.maps.event.trigger(selectedMarker, 'click');
+        }
+
+        var images = '<div class="image "><img style="width:90px " src="./src/images/flood.png " alt=" " /></div>';
+        var marker_html = '<div class="pin public marker_3 " data-categories="public ">' +
+			'<div class="wrapper ">' +
+				'<div class="large " style="text-align:center ">' +
+                '<a href="http://www.portnews.com.au/story/3948957/weather-update-ferry-services-on-flood-watch-photos-video-live-radar/">' +
+					images +
+					'<div class="text" style="background-color:lightgrey;color:red">' +
+						'<strong> Flood Warning 05/06/2016 </strong>' +
+					'</div>' + 
+                '</a>' +
+				'</div>' +
+			'</div>' +
+			'<span></span>' +
+			'</div>';        
+        var floodMarker = new RichMarker({
+            position: new google.maps.LatLng(-31.4193131,152.8900168),
+            draggable: false,
+            flat: true,
+            anchor: RichMarkerPosition.BOTTOM,
+            content: marker_html        
+        });
+        floodMarker.setMap(map); 
+
+        function popDialog() {
+            BootstrapDialog.show({
+                title: 'Send Alert',
+                message: 'Flood Warning!'
+            });
+        }
+    </script>
+</body>
+
+</html>

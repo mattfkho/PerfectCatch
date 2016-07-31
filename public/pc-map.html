@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Map </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./src/tides.css' />
+    <link rel='stylesheet' href='./lib/bootstrap/dist/css/bootstrap.min.css' />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet"
+        type="text/css" />
+</head>
+
+<body>
+    <div class='container'>
+        <div class='page-header'>
+            <h1> Perfect Catch </h1>
+        </div>
+
+        <div class='row'>
+            <div class='col-sm-5'>
+                <div style='padding:2px'>
+                    <button class='btn btn-primary' style='width:150px'> Warnings </button>
+                    <button class='btn btn-primary' style='width:150px'> Temperature </button>
+                </div>
+            </div>
+            <div class='col-sm-5 text-right'>
+                <div style='padding:2px'>
+                    <button class='btn btn-primary' style='width:150px' onclick="popDialog()"> Send Alert </button>
+                </div>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-sm-10'>
+                <div style='padding:2px'>
+                    <button class='btn btn-primary' style='width:150px'> Fishing Calendar </button>
+                    <button class='btn btn-primary' style='width:150px'> Location </button>
+                    <button class='btn btn-primary' style='width:150px'> Tackle Box </button>
+                    <button class='btn btn-primary' style='width:150px'> Catch </button>
+                </div>
+            </div>
+        </div>        
+
+        <div class='row'>
+            <div class='col-sm-10'>
+
+                <div id="map" style="height: 400px; width: auto"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8lJPCsJirewFWI1KfjoTDaDKoTPdrO9E "></script>
+    <script src="./src/RichMarker.js"></script>
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js "></script>
+    <script type="text/javascript">
+
+        var map;
+        var infoWindow;
+
+        var mapOptions = {
+            zoom: 4,
+            center: new google.maps.LatLng(-23.6833333333, 133.866666667),
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+        }
+
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        var markers = [];
+
+        var infoWindow = new google.maps.InfoWindow();
+
+        openInfoWindow = function (e, selectedMarker) {
+             e.preventDefault();
+             google.maps.event.trigger(selectedMarker, 'click');
+        }
+
+        var images = '<div class="image "><img style="width:40px " src="./src/images/map-pin-red.png" alt=" " /></div>';
+        var marker_html = '<div class="pin public marker_3 " data-categories="public ">' +
+			'<div class="wrapper ">' +
+				'<div class="large " style="text-align:center ">' +
+                '<a href="./pc-full.html">' +
+					images +
+					'<div class="text ">' +
+						'<strong>Port Macquaire</strong>' +
+					'</div>' +
+                '</a>' + 
+				'</div>' +
+			'</div>' +
+			'<span></span>' +
+			'</div>';        
+        var marker1 = new RichMarker({
+            position: new google.maps.LatLng(-32.32, 152.35),
+            draggable: false,
+            flat: true,
+            anchor: RichMarkerPosition.BOTTOM,
+            content: marker_html        
+        });
+        marker1.setMap(map); 
+
+        function popDialog() {
+            BootstrapDialog.show({
+                title: 'Send Alert',
+                message: 'Flood Warning!'
+            });
+        }
+    </script>
+
+</body>
+
+</html>
